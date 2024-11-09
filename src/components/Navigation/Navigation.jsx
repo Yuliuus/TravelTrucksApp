@@ -20,10 +20,10 @@ export default function Navigation() {
         </Link>
       </div>
       <nav className={css.navigation}>
-        <NavLink to="/" className={buildLinkClass}>
+        <NavLink to="/" className={(buildLinkClass, css.link)}>
           Home
         </NavLink>
-        <NavLink to="/catalog" className={buildLinkClass}>
+        <NavLink to="/catalog" className={(buildLinkClass, css.link)}>
           Catalog
         </NavLink>
       </nav>
