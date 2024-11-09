@@ -1,0 +1,23 @@
+.navigationWrap {
+  background-color: var(--badges);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 72px;
+}
+
+.navigation {
+  display: flex;
+  gap: 32px;
+  padding: 28px 64px;
+}
+
+.logo {
+  position: absolute;
+  left: 64px;
+}
+
+.active {
+  color: var(--button-hover);
+}
