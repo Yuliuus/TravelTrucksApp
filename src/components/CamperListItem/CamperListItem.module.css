@@ -1,0 +1,16 @@
+.wrap {
+  border: 1px solid var(--gray-light);
+  border-radius: 20px;
+  padding: 24px;
+  height: 368px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.camperimg {
+  width: 292px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
