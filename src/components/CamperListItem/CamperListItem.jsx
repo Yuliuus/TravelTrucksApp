@@ -1,14 +1,8 @@
 import css from "./CamperListItem.module.css";
-import { useDispatch } from "react-redux";
 import Location from "../Location/Location";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function CamperListItem({ data }) {
-  const navigate = useNavigate();
-
-  const handleShowMore = () => {
-    navigate(`/camper/${data.id}`);
-  };
   return (
     <div className={css.wrap}>
       <div>
@@ -35,8 +29,8 @@ export default function CamperListItem({ data }) {
         <div className={css.features}>
           <h2>features</h2>
         </div>
-        <button className={css.btn} onClick={handleShowMore}>
-          Show more
+        <button className={css.btn}>
+          <Link to={`/catalog/${data.id}`}>Show more</Link>
         </button>
       </div>
     </div>
