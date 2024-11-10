@@ -1,0 +1,14 @@
+.wrapLocation {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}

@@ -26,12 +26,6 @@
   justify-content: space-between;
 }
 
-.wrapLocation {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
 .description {
   margin-top: 24px;
   display: -webkit-box;
@@ -54,4 +48,19 @@
 .btn {
   margin-top: 24px;
   color: var(--white);
+}
+.like {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.likeBtn {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.likeBtn:hover {
+  color: none;
 }
