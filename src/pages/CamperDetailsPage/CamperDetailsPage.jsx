@@ -3,8 +3,10 @@ import { useEffect } from "react";
 import { fetchCamperById } from "../../redux/operations";
 import { useDispatch, useSelector } from "react-redux";
 import { getCamperById } from "../../redux/selectors";
+import { NavLink } from "react-router-dom";
 import Location from "../../components/Location/Location";
 import css from "./CampersDetailsPage.module.css";
+import clsx from "clsx";
 
 export default function CamperDetailsPage() {
   const { id } = useParams();
@@ -42,10 +44,23 @@ export default function CamperDetailsPage() {
         </ul>
       </div>
       <p className={css.description}>{description}</p>
-      <div>
-        <h2>Features</h2>
-        <h2>Reviews</h2>
-      </div>
+      <ul className={css.info}>
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? `${css.infoText} active` : css.infoText
+            }
+            to="features"
+          >
+            Features
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className={css.infoText} to="reviews">
+            Reviews
+          </NavLink>
+        </li>
+      </ul>
     </div>
   );
 }
