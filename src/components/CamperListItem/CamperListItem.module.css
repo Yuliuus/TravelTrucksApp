@@ -11,6 +11,46 @@
 .camperimg {
   width: 292px;
   height: 320px;
-  object-fit: cover;
   border-radius: 10px;
+  object-fit: cover;
+}
+
+.wrapInfo {
+  max-width: 525px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.wrapLocation {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.description {
+  margin-top: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 40px;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+  font-family: inherit;
+}
+
+.features {
+  margin-top: 24px;
+}
+
+.btn {
+  margin-top: 24px;
+  color: var(--white);
 }

@@ -1,5 +1,5 @@
 import css from "./CatalogPage.module.css";
-import CamperListItem from "../../components/CamperListItem/CamperListItem";
+import CamperList from "../../components/CampersList/CampersList";
 
 export default function CatalogPage() {
   return (
@@ -19,8 +19,7 @@ export default function CatalogPage() {
       {/* Main Content */}
       <main className={css.main}>
         <div>
-          <h3>List of Campers</h3>
-          <CamperListItem />
+          <CamperList />
         </div>
       </main>
     </section>

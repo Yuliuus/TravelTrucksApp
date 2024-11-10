@@ -13,8 +13,8 @@ export default function Navigation() {
       <div className={css.logo}>
         <Link to="/" className={css.logoText}>
           <img
-            srcSet="/public/Logo-1x.png 1x, /public/Logo-2x.png 2x"
-            src="/public/Logo-1x.png"
+            srcSet="/Logo-1x.png 1x, /Logo-2x.png 2x"
+            src="/Logo-1x.png"
             alt="TravelTrucks"
           />
         </Link>

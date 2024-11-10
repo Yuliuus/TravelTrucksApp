@@ -1,5 +1,5 @@
 .homeWrap {
-  background-image: url(/public/bg-hero-1x.png);
+  background-image: url(/bg-hero-1x.png);
   /* background-color: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,12 +16,14 @@
   font-weight: 600;
   font-size: 48px;
   line-height: 67%;
+  color: var(--inputs);
 }
 .subtitle {
   margin-bottom: 40px;
   font-weight: 600;
   font-size: 24px;
   line-height: 133%;
+  color: var(--inputs);
 }
 
 .button {
