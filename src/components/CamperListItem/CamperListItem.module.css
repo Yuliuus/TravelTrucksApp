@@ -35,6 +35,7 @@
 .description {
   margin-top: 24px;
   display: -webkit-box;
+  background-clip: text;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
