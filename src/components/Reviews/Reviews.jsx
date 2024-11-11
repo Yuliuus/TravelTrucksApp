@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { fetchCamperById } from "../../redux/operations";
 
 import css from "./Reviews.module.css";
+import FeedbackForm from "../FeedbackForm/feedbackForm";
 
 export default function Reviews() {
   const { id } = useParams();
@@ -21,10 +22,8 @@ export default function Reviews() {
 
   const { reviews } = camper;
 
-  // const stars = Array.from({ length: 5 }, (_, index) => index < rating);
-
   return (
-    <div>
+    <div className={css.wrapper}>
       {reviews && reviews.length > 0 ? (
         <ul className={css.wrap}>
           {reviews.map((review, index) => (
@@ -60,8 +59,9 @@ export default function Reviews() {
           ))}
         </ul>
       ) : (
-        <p>No reviews available for this camper.</p>
+        <p className={css.comment}>No reviews available for this camper.</p>
       )}
+      <FeedbackForm />
     </div>
   );
 }

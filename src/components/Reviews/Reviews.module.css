@@ -1,6 +1,11 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 56px;
+}
 .wrap {
   max-width: 631px;
-  margin-top: 56px;
 }
 .avatar {
   width: 60px;
