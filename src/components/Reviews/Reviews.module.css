@@ -1,0 +1,51 @@
+.wrap {
+  max-width: 631px;
+  margin-top: 56px;
+}
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--badges);
+  color: var(--button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+}
+.reviewer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.nameRating {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nameRating h2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+.reviewItem {
+  margin-bottom: 44px;
+}
+
+.stars {
+  display: flex;
+}
+
+.starFilled {
+  fill: var(--rating);
+}
+
+.starEmpty {
+  fill: var(--badges);
+}
+.comment {
+  color: var(--text);
+}

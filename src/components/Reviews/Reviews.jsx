@@ -4,31 +4,64 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { fetchCamperById } from "../../redux/operations";
 
+import css from "./Reviews.module.css";
+
 export default function Reviews() {
+  const { id } = useParams();
   const dispatch = useDispatch();
   const camper = useSelector(getCamperById);
-  const { id } = useParams();
 
   useEffect(() => {
     if (id) {
-      dispatch(fetchCamperById(id)); // Dispatch the action to fetch data
+      dispatch(fetchCamperById(id));
     }
   }, [id, dispatch]);
 
   if (!camper) return <p>Loading...</p>;
 
   const { reviews } = camper;
-  console.log(camper);
+
+  // const stars = Array.from({ length: 5 }, (_, index) => index < rating);
 
   return (
     <div>
-      <ul>
-        {reviews.map((review, index) => (
-          <li key={index}>
-            <h2>{review.reviewer_name}</h2>
-          </li>
-        ))}
-      </ul>
+      {reviews && reviews.length > 0 ? (
+        <ul className={css.wrap}>
+          {reviews.map((review, index) => (
+            <li key={index} className={css.reviewItem}>
+              <div className={css.reviewer}>
+                <div className={css.avatar}>
+                  {review.reviewer_name[0].toUpperCase()}
+                </div>
+                <div className={css.nameRating}>
+                  <h2>{review.reviewer_name}</h2>
+                  <div className={css.stars}>
+                    {Array.from({ length: 5 }, (_, i) => (
+                      <span key={i}>
+                        <svg width={16} height={16}>
+                          <use
+                            className={
+                              i < review.reviewer_rating
+                                ? css.starFilled
+                                : css.starEmpty
+                            }
+                            width={16}
+                            height={16}
+                            href="/public/sprite.svg#icon-star"
+                          />
+                        </svg>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className={css.comment}>{review.comment}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No reviews available for this camper.</p>
+      )}
     </div>
   );
 }
