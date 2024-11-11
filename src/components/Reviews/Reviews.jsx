@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { fetchCamperById } from "../../redux/operations";
 
 import css from "./Reviews.module.css";
-import FeedbackForm from "../FeedbackForm/feedbackForm";
+import FeedbackForm from "../FeedbackForm/FeedbackForm";
 
 export default function Reviews() {
   const { id } = useParams();
@@ -46,7 +46,7 @@ export default function Reviews() {
                             }
                             width={16}
                             height={16}
-                            href="/public/sprite.svg#icon-star"
+                            href="/sprite.svg#icon-star"
                           />
                         </svg>
                       </span>

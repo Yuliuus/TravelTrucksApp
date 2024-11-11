@@ -19,9 +19,7 @@ ul {
 
 a {
   text-decoration: none;
-}
-a:hover {
-  color: var(--button-hover);
+  color: var(--white);
 }
 
 body {

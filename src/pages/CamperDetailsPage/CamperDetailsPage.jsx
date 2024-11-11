@@ -22,7 +22,7 @@ export default function CamperDetailsPage() {
     return <p>Loading...</p>;
   }
 
-  const { name, price, description, gallery, reviews } = camperById;
+  const { name, price, description, gallery } = camperById;
 
   return (
     <div className={css.wrap}>
