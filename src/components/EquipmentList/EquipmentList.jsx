@@ -11,8 +11,6 @@ export default function EquipmentList({ features }) {
     "radio",
     "refrigerator",
     "microwave",
-    "gas",
-    "water",
   ];
   const campersFeatures = availableFeatures.filter(
     (feature) => features[feature]

@@ -15,13 +15,13 @@ export default function CampersList() {
   const [page, setPage] = useState(1);
   const limit = 4;
 
-  const handleLoadMore = () => {
-    setPage(page + 1);
-  };
-
   useEffect(() => {
     dispatch(fetchCampers({ page, limit }));
   }, [dispatch, page]);
+
+  const handleLoadMore = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
 
   return (
     <>

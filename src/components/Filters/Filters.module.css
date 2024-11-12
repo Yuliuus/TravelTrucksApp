@@ -27,9 +27,11 @@
   line-height: 150%;
   letter-spacing: -0.01em;
 }
-.listItem:active {
-  border-color: var(--button-hover);
+.listItem:active,
+.listItem:hover {
+  border-color: var(--button);
 }
+
 .btn {
   margin-top: 40px;
   color: var(--white);

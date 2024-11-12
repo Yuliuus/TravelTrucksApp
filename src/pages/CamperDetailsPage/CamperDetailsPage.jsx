@@ -8,6 +8,10 @@ import Location from "../../components/Location/Location";
 import css from "./CampersDetailsPage.module.css";
 import clsx from "clsx";
 
+const buildLinkClass = ({ isActive }) => {
+  return clsx(css.infoText, isActive && css.active);
+};
+
 export default function CamperDetailsPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -47,17 +51,12 @@ export default function CamperDetailsPage() {
       <div>
         <ul className={css.info}>
           <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? `${css.infoText} active` : css.infoText
-              }
-              to="features"
-            >
+            <NavLink className={buildLinkClass} to="features">
               Features
             </NavLink>
           </li>
           <li>
-            <NavLink className={css.infoText} to="reviews">
+            <NavLink className={buildLinkClass} to="reviews">
               Reviews
             </NavLink>
           </li>

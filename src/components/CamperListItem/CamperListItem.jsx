@@ -19,7 +19,7 @@ export default function CamperListItem({ data }) {
           <div className={css.like}>
             <h2>&euro;{data.price}.00</h2>
             <button className={css.likeBtn}>
-              <svg width={26} height={24}>
+              <svg>
                 <use href="/sprite.svg#icon-like" />
               </svg>
             </button>
