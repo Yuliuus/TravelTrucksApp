@@ -18,11 +18,11 @@ export default function CamperListItem({ data }) {
           <h2>{data.name}</h2>
           <div className={css.like}>
             <h2>&euro;{data.price}.00</h2>
-            <button className={css.likeBtn}>
-              <svg>
-                <use href="/sprite.svg#icon-like" />
-              </svg>
-            </button>
+            {/* <button className={css.likeBtn}> */}
+            <svg className={css.svg}>
+              <use href="/sprite.svg#icon-like" height={24} width={26} />
+            </svg>
+            {/* </button> */}
           </div>
         </div>
         <Location data={data} />
