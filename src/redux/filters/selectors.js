@@ -1,0 +1,1 @@
+export const getCamperFeatures = state => state.filters.features;

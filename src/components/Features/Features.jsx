@@ -22,13 +22,14 @@ export default function Features() {
     return <p>Loading...</p>;
   }
 
-  const { form, length, width, height, tank, consumption } = camperById;
+  const { form, length, width, height, tank, consumption, ...camperFeatures } =
+    camperById;
 
   return (
     <div className={css.wrapper}>
       <div className={css.wrap}>
         <div>
-          <EquipmentList />
+          <EquipmentList features={camperFeatures} />
         </div>
         <div className={css.detailsWrap}>
           <h2 className={css.title}>Vehicle details</h2>

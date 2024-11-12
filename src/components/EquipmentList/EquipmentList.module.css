@@ -2,13 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  max-width: ;
 }
 
 .equipListItem {
   padding: 12px 18px;
   border-radius: 100px;
-  background: var(--button);
+  background: var(--badges);
   font-size: 16px;
   line-height: 150%;
   text-align: center;
