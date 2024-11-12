@@ -1,19 +1,16 @@
 import css from "./CatalogPage.module.css";
 import CamperList from "../../components/CampersList/CampersList";
+import LocationSearch from "../../components/LocationSearch/LocationSearch";
+import Filters from "../../components/Filters/Filters";
 
 export default function CatalogPage() {
   return (
     <section className={css.wrap}>
       {/* Sidebar */}
       <aside className={css.sidebar}>
+        <LocationSearch />
         <div>
-          <h2>Location</h2>
-        </div>
-        <div>
-          <h2>Filters</h2>
-        </div>
-        <div>
-          <h2>Vehicle Type</h2>
+          <Filters />
         </div>
       </aside>
       {/* Main Content */}

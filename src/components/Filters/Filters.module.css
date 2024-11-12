@@ -1,0 +1,36 @@
+.name {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+.title {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--gray-light);
+  margin-bottom: 24px;
+  margin-top: 32px;
+}
+.listWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+.listItem {
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  padding-top: 16px;
+  width: 112px;
+  height: 96px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+}
+.listItem:active {
+  border-color: var(--button-hover);
+}
+.btn {
+  margin-top: 40px;
+  color: var(--white);
+}
